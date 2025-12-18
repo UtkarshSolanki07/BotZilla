@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
-import { Clock, Link, Send } from "lucide-react";
+import { Clock, Link, Send, FileText, Download } from "lucide-react";
 import moment from "moment";
 import React from "react";
+import { handleAction, exportToPDF, exportToDOCX } from "@/services/Shared";
 
 const Header = ({ researchInputRecord }) => {
   return (
@@ -21,12 +22,20 @@ const Header = ({ researchInputRecord }) => {
       </h2>
 
       <div className="flex gap-3">
-        <Button>
+        <Button onClick={() => handleAction("link", researchInputRecord)}>
           <Link />
         </Button>
-        <Button>
+        <Button onClick={() => handleAction("share", researchInputRecord)}>
           <Send />
           Share
+        </Button>
+        <Button onClick={() => exportToPDF(researchInputRecord)}>
+          <FileText />
+          PDF
+        </Button>
+        <Button onClick={() => exportToDOCX(researchInputRecord)}>
+          <Download />
+          DOCX
         </Button>
       </div>
     </div>

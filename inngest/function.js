@@ -17,7 +17,7 @@ export const llmModel = inngest.createFunction(
             parts: [
               {
                 text:
-                  "Depends on user input sources, summarize and search about topic. Give a markdown text with proper formatting. User Input is: " +
+                  "Depends on user input sources, summarize and search about topic. Do NOT use markdown formatting (no bold, italics, headers, or code blocks). Provide the response in clear, structured plain text. Use bullet points (•) for lists if necessary. User Input is: " +
                   event.data.searchInput,
               },
             ],
@@ -42,7 +42,7 @@ export const llmResearchModel = inngest.createFunction(
   { id: "llm-research-model" },
   { event: "llm-research-model" },
   async ({ event, step }) => {
-    
+
     const { data: previousChats, error: fetchError } = await supabase
       .from("Chats")
       .select("userSearchInput, aiResp")
@@ -53,11 +53,11 @@ export const llmResearchModel = inngest.createFunction(
       console.error("Error fetching previous chats:", fetchError);
     }
 
-    
+
     let conversationContext = "";
     if (previousChats && previousChats.length > 0) {
       conversationContext = previousChats
-        .filter((chat) => chat.aiResp) 
+        .filter((chat) => chat.aiResp)
         .map(
           (chat) => `User: ${chat.userSearchInput}\nAssistant: ${chat.aiResp}`
         )
@@ -67,7 +67,7 @@ export const llmResearchModel = inngest.createFunction(
 
     const prompt =
       conversationContext +
-      "Depends on user input sources, summarize and research about topic. Give a markdown text with proper formatting. User Input is: " +
+      "Depends on user input sources, summarize and research about topic. Do NOT use markdown formatting (no bold, italics, headers, or code blocks). Provide the response in clear, structured plain text. Use bullet points (•) for lists if necessary. User Input is: " +
       event.data.researchInput;
 
     const aiResp = await step.ai.infer("generate-ai-llm-research-model-call", {

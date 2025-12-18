@@ -5,7 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   ArrowRight,
   Atom,
-  AudioLines,
   Cpu,
   Globe,
   Mic,
@@ -38,7 +37,7 @@ function ChatInputBox() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Trigger animation after mount
+
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
@@ -62,26 +61,25 @@ function ChatInputBox() {
       type: searchType,
       libId: libId,
     };
-    const { data, error } = await supabase
-      .from("Library")
-      .insert([insertData])
-      .select();
-    if (error) {
-      console.error("Error inserting library record:", error);
-      setLoading(false);
-      alert("Failed to create search record. Please try again.");
-      return;
-    }
-    setLoading(false);
+
+    // Use fetch with keepalive to ensure the request completes even if the page unloads
+    fetch("/api/create-search", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ insertData }),
+      keepalive: true,
+    }).catch((err) => console.error("Background insert failed:", err));
+
+    // Optimistic navigation - don't wait for insert
     if (searchType === "Research") {
-      router.push(`/research/${libId}`);
+      router.push(`/research/${libId}?q=${encodeURIComponent(userSearchInput)}`);
     } else {
-      router.push(`/search/${libId}`);
+      router.push(`/search/${libId}?q=${encodeURIComponent(userSearchInput)}`);
     }
-    console.log(data?.[0]);
   };
 
-  // Letters for "BotZilla" to render reliably without wrapping.
   const heroLetters = ["B", "o", "t", "Z", "i", "l", "l", "a"];
 
   return (
@@ -252,9 +250,8 @@ function ChatInputBox() {
       <div
         className={`p-2 w-full max-w-2xl border rounded-2xl mt-6 transition-all duration-300 
                     ${isHovering ? "shadow-lg" : "shadow-md"} 
-                    ${
-                      userSearchInput ? "border-blue-400" : "border-gray-200"
-                    } bg-white`}
+                    ${userSearchInput ? "border-blue-400" : "border-gray-200"
+          } bg-white`}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -339,28 +336,18 @@ function ChatInputBox() {
       ${loading ? "bg-blue-400" : ""}`}
               aria-label="Submit search"
             >
-              {!userSearchInput ? (
-                <AudioLines
-                  className={`text-white h-5 w-5 ${
-                    pulseEffect ? "scale-110" : "scale-100"
+              <ArrowRight
+                className={`text-white h-5 w-5 ${loading ? "animate-spin" : ""
                   }`}
-                />
-              ) : (
-                <ArrowRight
-                  className={`text-white h-5 w-5 ${
-                    loading ? "animate-spin" : "animate-bounce"
-                  }`}
-                />
-              )}
+              />
             </Button>
           </div>
         </div>
       </div>
 
       <div
-        className={`mt-6 text-gray-400 text-sm transition-opacity duration-500 text-center ${
-          userSearchInput ? "opacity-0" : "opacity-80"
-        }`}
+        className={`mt-6 text-gray-400 text-sm transition-opacity duration-500 text-center ${userSearchInput ? "opacity-0" : "opacity-80"
+          }`}
       >
         Start typing to search or research anything
       </div>

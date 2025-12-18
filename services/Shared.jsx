@@ -1,408 +1,399 @@
-export const AIModelsOption=[
-    {
-        id:1,
-        name:'Sonar',
-        desc:'Perplexity fast model',
-        modelApi:'',
-    },
-    {
-        id:2,
-        name:'Claude 3.7',
-        desc:'Smart model by Anthropic',
-        modelApi:'',
-    },
-    {
-        id:3,
-        name:'GPT-4.1',
-        desc:'Powerful model by OpenAI',
-        modelApi:'',
-    },
-    {
-        id:1,
-        name:'Sonar',
-        desc:'Perplexity fast model',
-        modelApi:'',
-    },
-    {
-        id:4,
-        name:'Gemini 2.5 Pro',
-        desc:'Versatile model by Google',
-        modelApi:'',
-    },
-    {
-        id:5,
-        name:'Grok 3 Beta',
-        desc:'xAI latest model',
-        modelApi:'',
-    }
-]
-
-
-
-
-
-export const SEARCH_RESULT = [
+export const AIModelsOption = [
   {
-    "kind": "customsearch#result",
-    "title": "Top Stories | NBA.com",
-    "htmlTitle": "Top Stories | NBA.com",
-    "link": "https://www.nba.com/news/category/top-stories",
-    "displayLink": "www.nba.com",
-    "snippet": "Read the latest news and articles for Top Stories.",
-    "htmlSnippet": "Read the latest <b>news</b> and articles for Top Stories.",
-    "formattedUrl": "https://www.nba.com/news/category/top-stories",
-    "htmlFormattedUrl": "https://www.nba.com/<b>news</b>/category/top-stories",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghS4y4NKO-JXXUOkJqXrjlbUxsXE-WWyO13ymUxYCGgeRxbK0WBJFBpfF&s",
-          "width": "311",
-          "height": "162"
-        }
-      ],
-      "metatags": [
-        {
-          "msapplication-tilecolor": "#da532c",
-          "og:image": "https://cdn.nba.com/logos/nba/fallback/NBA.Com-National-Basketball-Association.png",
-          "og:site_name": "NBA",
-          "viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no",
-          "twitter:image": "https://cdn.nba.com/logos/nba/fallback/NBA.Com-National-Basketball-Association.png"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://cdn.nba.com/logos/nba/fallback/NBA.Com-National-Basketball-Association.png"
-        }
-      ]
-    }
+    id: 1,
+    name: "Sonar",
+    desc: "Perplexity fast model",
+    modelApi: "",
   },
-
   {
-    "kind": "customsearch#result",
-    "title": "ZZ Top: Official Website",
-    "htmlTitle": "ZZ Top: Official Website",
-    "link": "https://www.zztop.com/",
-    "displayLink": "www.zztop.com",
-    "snippet": "View latest tour dates, get email updates, check it out! Latest news, 12/12/2023 ZZ TOP ANNOUNCE FIRST EUROPEAN TOUR IN FIVE YEARS.",
-    "htmlSnippet": "View latest tour dates, get email <b>updates</b>, check it out! Latest <b>news</b>, 12/12/2023 ZZ TOP ANNOUNCE FIRST EUROPEAN TOUR IN FIVE YEARS.",
-    "formattedUrl": "https://www.zztop.com/",
-    "htmlFormattedUrl": "https://www.zztop.com/",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKKygARJeipg8s6dwvaYxN1xCSHhGbHCrbn8qtq3fjhH8n-OhLg-3Qr3I&s",
-          "width": "310",
-          "height": "162"
-        }
-      ],
-      "MusicEvent": [
-        {
-          "name": "Save-On-Foods Memorial Centre",
-          "startDate": "2025-06-01"
-        },
-        {
-          "name": "Mercedes-Benz Amphitheater",
-          "startDate": "2025-09-07"
-        },
-        
-      ],
-      "metatags": [
-        {
-          "og:image": "https://www.zztop.com/templates/default/images/og_image.jpg",
-          "og:type": "website",
-          "og:site_name": "ZZTop",
-          "viewport": "width=device-width, initial-scale=1, maximum-scale=2",
-          "og:title": "Official Website | ZZ Top",
-          "og:url": "https://www.zztop.com",
-          "og:description": "The Official Website of ZZ Top"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://www.zztop.com/templates/default/images/og_image.jpg"
-        }
-      ]
-    }
+    id: 2,
+    name: "Claude 3.7",
+    desc: "Smart model by Anthropic",
+    modelApi: "",
   },
-
   {
-    "kind": "customsearch#result",
-    "title": "Latest News, Breaking News, Top News Headlines and Current ...",
-    "htmlTitle": "Latest <b>News</b>, Breaking <b>News</b>, Top <b>News</b> Headlines and Current ...",
-    "link": "https://timesofindia.indiatimes.com/news",
-    "displayLink": "timesofindia.indiatimes.com",
-    "snippet": "Latest News · Dhoni warns young batters: 'If you're looking for 200-plus SR then ... ' · Everything Google announced at its biggest event of the year · Dhoni's ...",
-    "htmlSnippet": "Latest <b>News</b> &middot; Dhoni warns young batters: &#39;If you&#39;re looking for 200-plus SR then ... &#39; &middot; Everything Google announced at its biggest event of the year &middot; Dhoni&#39;s&nbsp;...",
-    "formattedUrl": "https://timesofindia.indiatimes.com/news",
-    "htmlFormattedUrl": "https://timesofindia.indiatimes.com/<b>news</b>",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn0p6sgygWFwVXjfpRjorEKbdYA9zpbhc4NSyjDUu1WqFknlJUj7TRVZIC&s",
-          "width": "275",
-          "height": "183"
-        }
-      ],
-      "organization": [
-        {
-          "name": "Times of India",
-          "url": "https://timesofindia.indiatimes.com"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://static.toiimg.com/photo/24487812.cms",
-          "twitter:title": "Latest News, Breaking News, Top News Headlines and Current Affairs | Times of India",
-          "og:description": "Latest News Today: Breaking news on Politics, Business, Sports, Bollywood, Education, Science. Latest News on Politics, India, Current affairs.",
-          "og:url": "https://timesofindia.indiatimes.com/news"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://static.toiimg.com/photo/24487812.cms"
-        }
-      ]
-    }
+    id: 3,
+    name: "GPT-4.1",
+    desc: "Powerful model by OpenAI",
+    modelApi: "",
   },
-
   {
-    "kind": "customsearch#result",
-    "title": "Google News",
-    "htmlTitle": "Google <b>News</b>",
-    "link": "https://news.google.com/home?hl=en-US&gl=US&ceid=US:en",
-    "displayLink": "news.google.com",
-    "snippet": "... news you care about. Tailor Google News to your interests and habits so you can quickly catch up on the news. Sign in. Learn more. Top stories. Reuters. Liberal ...",
-    "htmlSnippet": "... <b>news</b> you care about. Tailor Google <b>News</b> to your interests and habits so you can quickly catch up on the <b>news</b>. Sign in. Learn more. Top stories. Reuters. Liberal&nbsp;...",
-    "formattedUrl": "https://news.google.com/home?hl=en-US&gl=US&ceid=US:en",
-    "htmlFormattedUrl": "https://<b>news</b>.google.com/home?hl=en-US&amp;gl=US&amp;ceid=US:en",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2AE_mHW4FspGNXIbbrBE3be1wYIw5yEyXzy6XMaNUPO29gcihNy7DC0xD&s",
-          "width": "225",
-          "height": "225"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://lh6.googleusercontent.com/proxy/3NclTnCvFtcRLZUDIB15z_AnMW0TOCYyuSQxf8PD3n_uKf5wb_jB9ovM2rESJFgJXeQjbH19BW0Bggs-Pof0x-S7g_8XEpSe4r-3vJsYRZlXvWMNrU3QCogkts8FptEMyu4aE_huQMLTogkw4oY6dfl1plHqTM3WKkypYwMA2TcaAWI=rj-c-w300-h300-l95-c0x34a853",
-          "og:title": "Home page - Google News",
-          "og:description": "Read full articles, watch videos, browse thousands of titles and more on the \"Home page\" topic with Google News."
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://lh6.googleusercontent.com/proxy/3NclTnCvFtcRLZUDIB15z_AnMW0TOCYyuSQxf8PD3n_uKf5wb_jB9ovM2rESJFgJXeQjbH19BW0Bggs-Pof0x-S7g_8XEpSe4r-3vJsYRZlXvWMNrU3QCogkts8FptEMyu4aE_huQMLTogkw4oY6dfl1plHqTM3WKkypYwMA2TcaAWI=rj-c-w300-h300-l95-c0x34a853"
-        }
-      ]
-    }
+    id: 1,
+    name: "Sonar",
+    desc: "Perplexity fast model",
+    modelApi: "",
   },
-
   {
-    "kind": "customsearch#result",
-    "title": "News: Today's News Headlines, Breaking News India, World News ...",
-    "htmlTitle": "<b>News</b>: Today&#39;s <b>News</b> Headlines, Breaking <b>News</b> India, World <b>News</b> ...",
-    "link": "https://www.hindustantimes.com/",
-    "displayLink": "www.hindustantimes.com",
-    "snippet": "Top News · US senator gives record-breaking 24-hour speech against Donald Trump · Waqf Bill in Lok Sabha today; INDIA bloc holds strategy meet, BJP issues whip.",
-    "htmlSnippet": "Top <b>News</b> &middot; US senator gives record-breaking 24-hour speech against Donald Trump &middot; Waqf Bill in Lok Sabha today; INDIA bloc holds strategy meet, BJP issues whip.",
-    "formattedUrl": "https://www.hindustantimes.com/",
-    "htmlFormattedUrl": "https://www.hindustantimes.com/",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZO9jhRJWS_yZI3_aocUZLyYhTwqYAk93UtePHHvxk5UaNs0lFPzqHY7m&s",
-          "width": "259",
-          "height": "194"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://www.hindustantimes.com/res/images/logo.png",
-          "og:site_name": "Hindustan Times",
-          "og:title": "News: Today’s News Headlines, Breaking News India, World News and Cricket News | Hindustan Times",
-          "og:description": "News Headlines Today: Hindustan Times offers the most reliable news in politics, sports, entertainment and business."
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://www.hindustantimes.com/res/images/logo.png"
-        }
-      ]
-    }
+    id: 4,
+    name: "Gemini 2.5 Pro",
+    desc: "Versatile model by Google",
+    modelApi: "",
   },
-
   {
-    "kind": "customsearch#result",
-    "title": "Blog/News - From the Top",
-    "htmlTitle": "Blog/<b>News</b> - From the Top",
-    "link": "https://fromthetop.org/blog/",
-    "displayLink": "fromthetop.org",
-    "snippet": "The From the Top blog features videos, interviews, and updates on our amazing young musicians! Subscribe today and get a regular dose of inspiration.",
-    "htmlSnippet": "The From the Top blog features videos, interviews, and <b>updates</b> on our amazing young musicians! Subscribe today and get a regular dose of inspiration.",
-    "formattedUrl": "https://fromthetop.org/blog/",
-    "htmlFormattedUrl": "https://fromthetop.org/blog/",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAY-Z5Xro3-QadN7fOgAyMLQtaQ6xzaxIr2UWqubYzq2MqyTjMzOgkvoWC&s",
-          "width": "297",
-          "height": "169"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://fromthetop.org/wp-content/uploads/Miami-287-show-image.jpg",
-          "og:type": "article",
-          "og:site_name": "From the Top",
-          "og:title": "Blog/News - From the Top",
-          "og:description": "The From the Top blog features videos, interviews, and updates on our amazing young musicians!"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://fromthetop.org/wp-content/uploads/Miami-287-show-image.jpg"
-        }
-      ]
-    }
+    id: 5,
+    name: "Grok 3 Beta",
+    desc: "xAI latest model",
+    modelApi: "",
   },
+];
 
-  {
-    "kind": "customsearch#result",
-    "title": "Kyocera Named to \"Top 100\" Global Innovators List for Fourth ...",
-    "htmlTitle": "Kyocera Named to &quot;Top 100&quot; Global Innovators List for Fourth ...",
-    "link": "https://global.kyocera.com/newsroom/news/2025/001021.html",
-    "displayLink": "global.kyocera.com",
-    "snippet": "Mar 13, 2025 ... Kyocera Corporation (President: Hideo Tanimoto, hereinafter \"Kyocera\") today announced that it has been recognized among the Top 100 Global ...",
-    "htmlSnippet": "Mar 13, 2025 <b>...</b> Kyocera Corporation (President: Hideo Tanimoto, hereinafter &quot;Kyocera&quot;) today announced that it has been recognized among the Top 100 Global&nbsp;...",
-    "formattedUrl": "https://global.kyocera.com/newsroom/news/2025/001021.html",
-    "htmlFormattedUrl": "https://global.kyocera.com/<b>news</b>room/<b>news</b>/2025/001021.html",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQKTrMPj2YnRgNzLqfCl1q6r22PEy18RnmXhgugrjgoY4zL5p-onToMmM&s",
-          "width": "310",
-          "height": "163"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://global.kyocera.com/_assets/img/common/ogp.png",
-          "og:type": "article",
-          "og:title": "Kyocera Named to",
-          "og:url": "https://global.kyocera.com/newsroom/news/2025/001021.html",
-          "og:description": "Kyocera Corporation (President: Hideo Tanimoto, hereinafter"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://global.kyocera.com/_assets/img/common/ogp.png"
-        }
-      ]
-    }
-  },
+// Shared function for link and share actions
+export const handleAction = (actionType, record) => {
+  const currentUrl = window.location.href;
 
-  {
-    "kind": "customsearch#result",
-    "title": "WIRED - The Latest in Technology, Science, Culture and Business ...",
-    "htmlTitle": "WIRED - The Latest in Technology, Science, Culture and Business ...",
-    "link": "https://www.wired.com/",
-    "displayLink": "www.wired.com",
-    "snippet": "The Big Story · Airbnb Is in Midlife Crisis Mode · North Korea Stole Your Job · If Anthropic Succeeds, a Nation of Benevolent AI Geniuses Could Be Born · Inside ...",
-    "htmlSnippet": "The Big Story &middot; Airbnb Is in Midlife Crisis Mode &middot; North Korea Stole Your Job &middot; If Anthropic Succeeds, a Nation of Benevolent AI Geniuses Could Be Born &middot; Inside&nbsp;...",
-    "formattedUrl": "https://www.wired.com/",
-    "htmlFormattedUrl": "https://www.wired.com/",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUQJJsu8sSegB_i4VjOQmLe53huH6Y3xaJIwphHfYPNKtuTZi1muRwThtd&s",
-          "width": "300",
-          "height": "168"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://media.wired.com/photos/615e2b8ce78a8cd913bbaa76/16:9/w_1280,c_limit/wired_bug.jpg",
-          "og:site_name": "WIRED",
-          "og:title": "WIRED - The Latest in Technology, Science, Culture and Business",
-          "og:description": "We bring you the future as it happens. From the latest in science and technology to the big stories in business and culture, we've got you covered."
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://media.wired.com/photos/615e2b8ce78a8cd913bbaa76/16:9/w_1280,c_limit/wired_bug.jpg"
-        }
-      ]
-    }
-  },
-
-  {
-    "kind": "customsearch#result",
-    "title": "HITS 2025 - Today's Top Songs - playlist by Topsify | Spotify",
-    "htmlTitle": "HITS 2025 - Today's Top Songs - playlist by Topsify | Spotify",
-    "link": "https://open.spotify.com/playlist/5iwkYfnHAGMEFLiHFFGnP4",
-    "displayLink": "open.spotify.com",
-    "snippet": "Playlist · HITS 2025 - Today's Top Songs · 60 items · 615K saves.",
-    "htmlSnippet": "Playlist · HITS 2025 - Today&#39;s Top Songs · 60 items · 615K saves.",
-    "formattedUrl": "https://open.spotify.com/playlist/5iwkYfnHAGMEFLiHFFGnP4",
-    "htmlFormattedUrl": "https://open.spotify.com/playlist/5iwkYfnHAGMEFLiHFFGnP4",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpdQt2lyiXKDjojaIj8L4pCjdK9HB5Z-oulZbkUgEVu7G9PgIS3ODife0&s",
-          "width": "225",
-          "height": "225"
-        }
-      ],
-      "metatags": [
-        {
-          "og:type": "music.playlist",
-          "og:site_name": "Spotify",
-          "og:title": "HITS 2025 - Today's Top Songs",
-          "og:url": "https://open.spotify.com/playlist/5iwkYfnHAGMEFLiHFFGnP4",
-          "og:description": "Playlist · Topsify · 60 items · 615K saves"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8488aed3c224912afac913ef0b"
-        }
-      ]
-    }
-  },
-
-  {
-    "kind": "customsearch#result",
-    "title": "World News | Latest Top Stories | Reuters",
-    "htmlTitle": "World <b>News</b> | Latest Top Stories | Reuters",
-    "link": "https://www.reuters.com/world/",
-    "displayLink": "www.reuters.com",
-    "snippet": "World · Airstrikes kill dozens in Gaza, criticism of Israel grows · EU countries adopt four sets of new Russia sanctions · Iran's Khamenei slams 'outrageous' US ...",
-    "htmlSnippet": "World &middot; Airstrikes kill dozens in Gaza, criticism of Israel grows &middot; EU countries adopt four sets of new Russia sanctions &middot; Iran&#39;s Khamenei slams &#39;outrageous&#39; US&nbsp;...",
-    "formattedUrl": "https://www.reuters.com/world/",
-    "htmlFormattedUrl": "https://www.reuters.com/world/",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTTdWXLpKs2aV_CPmPQK1Ud8fCb0HA-gwazFaeZThSJWNIMcDt85rnkZxn&s",
-          "width": "311",
-          "height": "162"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=287",
-          "og:type": "website",
-          "og:site_name": "Reuters",
-          "og:title": "World News | Latest Top Stories | Reuters",
-          "og:description": "Reuters.com is your online source for the latest world news stories and current events."
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=287"
-        }
-      ]
+  if (actionType === "link") {
+    // Copy link to clipboard
+    navigator.clipboard
+      .writeText(currentUrl)
+      .then(() => {
+        alert("Link copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy link: ", err);
+      });
+  } else if (actionType === "share") {
+    // Share functionality (using Web Share API if available, else fallback)
+    if (navigator.share) {
+      navigator
+        .share({
+          title: record?.searchInput || record?.researchInput || "Shared Item",
+          url: currentUrl,
+        })
+        .catch(console.error);
+    } else {
+      // Fallback: copy link and show message
+      navigator.clipboard
+        .writeText(currentUrl)
+        .then(() => {
+          alert("Link copied to clipboard! Share it manually.");
+        })
+        .catch((err) => {
+          console.error("Failed to copy link: ", err);
+        });
     }
   }
-];
+};
+
+// Function to extract content from record
+const extractContent = (record) => {
+  console.log("extractContent record:", record);
+  if (!record?.Chats || record.Chats.length === 0) {
+    console.log("No Chats found in record");
+    return null;
+  }
+
+  const latestChat = record.Chats[record.Chats.length - 1];
+  console.log("Latest chat:", latestChat);
+
+  const title =
+    record.searchInput || record.researchInput || "Exported Content";
+  const aiResponse = latestChat.aiResp || "";
+  const sources = latestChat.searchResult || [];
+
+  if (!aiResponse) {
+    console.log("No AI response found in latest chat");
+  }
+
+  return { title, aiResponse, sources };
+};
+
+// Export to PDF function
+export const exportToPDF = (record) => {
+  console.log("exportToPDF called with:", record);
+  const content = extractContent(record);
+  if (!content) {
+    alert("No content available to export");
+    return;
+  }
+
+  const { title, aiResponse, sources } = content;
+
+  // Import jsPDF dynamically
+  import("jspdf").then(({ jsPDF }) => {
+    const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 15;
+    const contentWidth = pageWidth - margin * 2;
+
+    let yPosition = 20;
+
+    // Helper to check page break
+    const checkPageBreak = (heightNeeded) => {
+      if (yPosition + heightNeeded > pageHeight - margin) {
+        doc.addPage();
+        yPosition = 20;
+        return true;
+      }
+      return false;
+    };
+
+    // --- Title Section ---
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(22);
+    doc.setTextColor(59, 130, 246); // Blue
+
+    const titleLines = doc.splitTextToSize(title, contentWidth);
+    doc.text(titleLines, margin, yPosition);
+    yPosition += titleLines.length * 8 + 5;
+
+    // Horizontal line
+    doc.setDrawColor(200, 200, 200);
+    doc.setLineWidth(0.5);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 10;
+    // --- AI Response Section ---
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(16);
+    doc.setTextColor(31, 41, 55); // Dark gray
+    doc.text("AI Response", margin, yPosition);
+    yPosition += 10;
+
+    // Parse and render plain text
+    const lines = aiResponse.split("\n");
+
+    lines.forEach((line) => {
+      // Simple plain text rendering
+      if (line.trim().length > 0) {
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(11);
+        doc.setTextColor(55, 65, 81);
+
+        const splitText = doc.splitTextToSize(line, contentWidth);
+        checkPageBreak(splitText.length * 5);
+        doc.text(splitText, margin, yPosition);
+        yPosition += splitText.length * 5 + 3;
+      }
+      // Empty lines
+      else {
+        yPosition += 4;
+      }
+    });
+
+    yPosition += 10;
+
+    // --- Sources Section ---
+    if (sources.length > 0) {
+      checkPageBreak(30);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(16);
+      doc.setTextColor(31, 41, 55);
+      doc.text("Sources", margin, yPosition);
+      yPosition += 8;
+
+      doc.setDrawColor(200, 200, 200);
+      doc.setLineWidth(0.3);
+      doc.line(margin, yPosition, pageWidth - margin, yPosition);
+      yPosition += 10;
+
+      sources.forEach((source, index) => {
+        checkPageBreak(40);
+
+        // Title
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(12);
+        doc.setTextColor(59, 130, 246);
+        const sourceTitle = `${index + 1}. ${source.title}`;
+        const titleLines = doc.splitTextToSize(sourceTitle, contentWidth);
+        doc.text(titleLines, margin, yPosition);
+        yPosition += titleLines.length * 5 + 3;
+
+        // Snippet
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
+        doc.setTextColor(75, 85, 99);
+        const snippetLines = doc.splitTextToSize(source.snippet, contentWidth - 5);
+        doc.text(snippetLines, margin + 5, yPosition);
+        yPosition += snippetLines.length * 4 + 4;
+
+        // URL
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(9);
+        doc.setTextColor(37, 99, 235);
+        const urlLines = doc.splitTextToSize(source.url, contentWidth - 5);
+        doc.textWithLink(urlLines[0], margin + 5, yPosition, { url: source.url });
+        doc.setTextColor(0, 0, 0); // Reset color
+        yPosition += 10;
+      });
+    }
+
+    // Footer
+    const pageCount = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= pageCount; i++) {
+      doc.setPage(i);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(8);
+      doc.setTextColor(156, 163, 175);
+      doc.text(
+        `Generated on ${new Date().toLocaleDateString()} - Page ${i} of ${pageCount}`,
+        margin,
+        pageHeight - 10
+      );
+    }
+
+    // Save
+    const fileName = `${title.replace(/[^a-z0-9]/gi, "_").toLowerCase()}.pdf`;
+    doc.save(fileName);
+  });
+};
+
+// Export to DOCX function
+export const exportToDOCX = (record) => {
+  const content = extractContent(record);
+  if (!content) {
+    alert("No content available to export");
+    return;
+  }
+
+  const { title, aiResponse, sources } = content;
+
+  // Import docx dynamically
+  import("docx").then(
+    ({
+      Document,
+      Packer,
+      Paragraph,
+      TextRun,
+      HeadingLevel,
+      AlignmentType,
+      UnderlineType,
+    }) => {
+      // Helper to parse plain text to DOCX paragraphs
+      const parsePlainTextToDocx = (text) => {
+        const lines = text.split("\n");
+        const paragraphs = [];
+
+        lines.forEach((line) => {
+          const trimmedLine = line.trim();
+
+          if (trimmedLine.length > 0) {
+            paragraphs.push(
+              new Paragraph({
+                children: [
+                  new TextRun({
+                    text: line,
+                    size: 24,
+                  })
+                ],
+                spacing: { after: 120 },
+              })
+            );
+          } else {
+            paragraphs.push(new Paragraph({ text: "" }));
+          }
+        });
+
+        return paragraphs;
+      };
+
+      const doc = new Document({
+        sections: [
+          {
+            properties: {
+              page: {
+                margin: {
+                  top: 720,
+                  right: 720,
+                  bottom: 720,
+                  left: 720,
+                },
+              },
+            },
+            children: [
+              // Title
+              new Paragraph({
+                text: title,
+                heading: HeadingLevel.TITLE,
+                alignment: AlignmentType.CENTER,
+                spacing: { after: 400 },
+              }),
+
+              // AI Response Header
+              new Paragraph({
+                children: [
+                  new TextRun({ text: "AI Response", bold: true, size: 32 }),
+                ],
+                spacing: { before: 400, after: 200 },
+              }),
+
+              // AI Response Content
+              ...parsePlainTextToDocx(aiResponse),
+
+              // Sources Header
+              ...(sources.length > 0
+                ? [
+                  new Paragraph({
+                    children: [
+                      new TextRun({ text: "Sources", bold: true, size: 32 }),
+                    ],
+                    spacing: { before: 600, after: 300 },
+                  }),
+
+                  // Sources Content
+                  ...sources.flatMap((source, index) => [
+                    new Paragraph({
+                      children: [
+                        new TextRun({
+                          text: `${index + 1}. ${source.title}`,
+                          bold: true,
+                          size: 26,
+                          color: "3B82F6", // Blue color
+                        }),
+                      ],
+                      spacing: { before: 200, after: 100 },
+                    }),
+                    new Paragraph({
+                      children: [
+                        new TextRun({
+                          text: source.snippet,
+                          size: 22,
+                          color: "6B7280", // Medium gray
+                        }),
+                      ],
+                      spacing: { after: 100 },
+                    }),
+                    new Paragraph({
+                      children: [
+                        new TextRun({
+                          text: source.url,
+                          size: 22,
+                          color: "2563EB", // Blue color
+                          underline: { type: UnderlineType.SINGLE },
+                        }),
+                      ],
+                      spacing: { after: 200 },
+                    }),
+                  ]),
+                ]
+                : []),
+
+              // Footer
+              new Paragraph({
+                children: [
+                  new TextRun({
+                    text: `Generated on ${new Date().toLocaleDateString()}`,
+                    size: 18,
+                    color: "9CA3AF", // Light gray
+                  }),
+                ],
+                alignment: AlignmentType.CENTER,
+                spacing: { before: 400 },
+              }),
+            ],
+          },
+        ],
+      });
+
+      Packer.toBlob(doc).then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `${title.replace(/[^a-z0-9]/gi, "_").toLowerCase()}.docx`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      });
+    }
+  );
+};

@@ -8,7 +8,7 @@ import ImageListTab from './ImageListTab';
 import SourceListTab from './SourceListTab';
 import { Button } from '@/components/ui/button';
 
-const DisplayResult = ({ searchInputRecord }) => {
+const DisplayResult = ({ searchInputRecord, onUpdate }) => {
     const tabs = [
         { label: 'Answer', icon: LucideSparkles },
         { label: 'Images', icon: LucideImage },
@@ -20,22 +20,22 @@ const DisplayResult = ({ searchInputRecord }) => {
     const { libId } = useParams();
     const [loadingSearch, setLoadingSearch] = useState(false);
     const [userInput, setUserInput] = useState('');
-    
+
 
     useEffect(() => {
-            searchInputRecord?.Chats.length==0 ? getSearchApiResult() : GetSearchRecords();
-            setSearchResults(searchInputRecord);
-            console.log('Search Input Record:', searchInputRecord);        
+        searchInputRecord?.Chats.length == 0 ? getSearchApiResult() : GetSearchRecords();
+        setSearchResults(searchInputRecord);
+        console.log('Search Input Record:', searchInputRecord);
     }, [searchInputRecord]);
 
     const getSearchApiResult = async () => {
         if (!userInput && !searchInputRecord?.searchInput) return;
-        
+
         setLoadingSearch(true);
 
         const result = await axios.post('/api/google-search-api', {
             searchInput: userInput || searchInputRecord.searchInput,
-            searchType: searchInputRecord.type??'Search',
+            searchType: searchInputRecord.type ?? 'Search',
         });
 
         const formattedSearchResp = result.data.slice(0, 5).map((item, index) => ({
@@ -65,9 +65,10 @@ const DisplayResult = ({ searchInputRecord }) => {
 
         console.log("Inserted record ID:", data[0].id);
         await GetSearchRecords();
+        if (onUpdate) onUpdate();
         setLoadingSearch(false);
         await GenerateAIResp(formattedSearchResp, data[0].id);
-        setUserInput(''); 
+        setUserInput('');
     };
 
     const GenerateAIResp = async (formattedSearchResp, recordId) => {
@@ -88,19 +89,20 @@ const DisplayResult = ({ searchInputRecord }) => {
             if (runResp?.data?.data?.[0]?.status === 'Completed') {
                 console.log('COMPLETED');
                 await GetSearchRecords();
+                if (onUpdate) onUpdate();
                 clearInterval(interval);
             }
         }, 1000);
     };
 
-    const GetSearchRecords=async()=>{
-        let{data:Library, error}= await supabase
-                .from('Library')
-                .select('*,Chats(*)')
-                .eq('libId',libId)
-                .order('id', {foreignTable:'Chats', ascending: true })
-                ;
-                
+    const GetSearchRecords = async () => {
+        let { data: Library, error } = await supabase
+            .from('Library')
+            .select('*,Chats(*)')
+            .eq('libId', libId)
+            .order('id', { foreignTable: 'Chats', ascending: true })
+            ;
+
         setSearchResults(Library[0]);
     }
 
@@ -113,59 +115,59 @@ const DisplayResult = ({ searchInputRecord }) => {
     return (
         <div className='mt-7'>
             {searchResults?.Chats?.map((chat, index) => (
-              <div key={index} className='mt-7'>
-                
-                <h2 className='font-bold text-4xl text-gray-600 '>{chat?.userSearchInput}</h2>
-                <div className="flex items-center space-x-6 border-b border-gray-200 pb-2 mt-6">
-            
-                {tabs.map(({ label, icon: Icon, badge }) => (
-                    <button
-                        key={label}
-                        onClick={() => setActiveTab(label)}
-                        className={`flex items-center gap-1 relative text-sm font-medium text-gray-700 hover:text-black ${activeTab === label ? 'text-black' : ''}`}
-                    >
-                        <Icon className="w-4 h-4" />
-                        <span>{label}</span>
-                        {badge && (
-                            <span className="ml-1 text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">
-                                {badge}
-                            </span>
-                        )}
-                        {activeTab === label && (
-                            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-black rounded"></span>
-                        )}
-                    </button>
-                ))}
-                <div className="ml-auto text-sm text-gray-500">
-                    1 task <span className="ml-1">↗</span>
-                </div>
-            </div>
+                <div key={index} className='mt-7'>
 
-            <div>
-                {activeTab =='Answer'?
-                <AnswerDisplay chat={chat} loadingSearch={loadingSearch} />:
-                activeTab=='Images'?<ImageListTab chat={chat}/> 
-                : activeTab=='Sources'?
-                <SourceListTab chats={chat}/>:null
-                }
-            </div>
-                <hr className='my-5' />
-              </div>  
+                    <h2 className='font-bold text-4xl text-gray-600 '>{chat?.userSearchInput}</h2>
+                    <div className="flex items-center space-x-6 border-b border-gray-200 pb-2 mt-6">
+
+                        {tabs.map(({ label, icon: Icon, badge }) => (
+                            <button
+                                key={label}
+                                onClick={() => setActiveTab(label)}
+                                className={`flex items-center gap-1 relative text-sm font-medium text-gray-700 hover:text-black ${activeTab === label ? 'text-black' : ''}`}
+                            >
+                                <Icon className="w-4 h-4" />
+                                <span>{label}</span>
+                                {badge && (
+                                    <span className="ml-1 text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">
+                                        {badge}
+                                    </span>
+                                )}
+                                {activeTab === label && (
+                                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-black rounded"></span>
+                                )}
+                            </button>
+                        ))}
+                        <div className="ml-auto text-sm text-gray-500">
+                            1 task <span className="ml-1">↗</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        {activeTab == 'Answer' ?
+                            <AnswerDisplay chat={chat} loadingSearch={loadingSearch} /> :
+                            activeTab == 'Images' ? <ImageListTab chat={chat} />
+                                : activeTab == 'Sources' ?
+                                    <SourceListTab chats={chat} /> : null
+                        }
+                    </div>
+                    <hr className='my-5' />
+                </div>
             ))}
             <div className='bg-white w-full border rounded-lg shadow-md p-3 px-5 flex justify-between fixed bottom-6 max-w-md lg:max-w-xl xl:max-w-3xl'>
-                <input 
-                    placeholder='Type Anything...' 
-                    className='outline-none w-full mr-2' 
+                <input
+                    placeholder='Type Anything...'
+                    className='outline-none w-full mr-2'
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
                     onKeyPress={handleKeyPress}
                 />
-                <Button 
-                    onClick={getSearchApiResult} 
+                <Button
+                    onClick={getSearchApiResult}
                     disabled={loadingSearch || !userInput.trim()}
                     className={!userInput.trim() ? 'opacity-50 cursor-not-allowed' : ''}
                 >
-                    {loadingSearch ? <Loader2Icon className='animate-spin'/> : <Send/>}
+                    {loadingSearch ? <Loader2Icon className='animate-spin' /> : <Send />}
                 </Button>
             </div>
         </div>
