@@ -52,7 +52,7 @@ BotZilla is a cutting-edge AI-powered search and research platform that combines
 
 ### Frontend
 - **Framework**: Next.js 15 with App Router
-- **UI Library**: React 18 with custom components
+- **UI Library**: React 18 with custom Shadcn components
 - **Styling**: Tailwind CSS with custom animations
 - **Icons**: Lucide React for consistent iconography
 
@@ -60,7 +60,7 @@ BotZilla is a cutting-edge AI-powered search and research platform that combines
 - **Authentication**: Clerk for user management
 - **Database**: Supabase for real-time data
 - **Background Jobs**: Inngest for async processing
-- **API Integration**: Google Search API, LLM APIs
+- **API Integration**: Google Search API, Google Gemini 2.0 Flash API
 
 ### Development Tools
 - **Language**: JavaScript/TypeScript
@@ -127,22 +127,6 @@ BotZilla is a cutting-edge AI-powered search and research platform that combines
 - Access multiple AI models for comprehensive insights
 - Generate citations and export results
 
-### API Integration
-BotZilla provides RESTful APIs for programmatic access:
-
-```javascript
-// Example: Create a search query
-const response = await fetch('/api/create-search', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    searchInput: 'Your query here',
-    type: 'search'
-  })
-});
-```
-
-
 ## 🏗️ Project Structure
 
 ```
@@ -178,24 +162,14 @@ We welcome contributions! Please follow these steps:
 - Add tests for new features
 - Update documentation as needed
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
 - [Next.js](https://nextjs.org/) for the amazing framework
 - [Supabase](https://supabase.com/) for the backend infrastructure
 - [Clerk](https://clerk.com/) for authentication
-- [Radix UI](https://www.radix-ui.com/) for accessible components
 - [Tailwind CSS](https://tailwindcss.com/) for styling
-
-## 📞 Support
-
-Need help? Reach out to us:
-- 📧 Email: support@botzilla.ai
-- 🐛 [GitHub Issues](https://github.com/yourusername/botzilla/issues)
-- 💬 [Discord Community](#)
 
 ---
 
