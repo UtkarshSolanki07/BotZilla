@@ -15,8 +15,10 @@ const ImageListTab = ({ chat }) => {
               alt={item?.title || 'Image'}
               width={200}
               height={200}
+              unoptimized={true}
               className="bg-accent rounded-xl object-contain transition duration-300"
             />
+
             <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               {item?.title || 'No Title'}
             </div>

@@ -1,18 +1,17 @@
-import { inngest } from "@/inngest/client";
+import { tasks } from "@trigger.dev/sdk/v3";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  const { researchInput, researchResult, recordId, previousContext } =
+  const { researchInput, researchResult, recordId, libId } =
     await req.json();
 
-  const inngestRunId = await inngest.send({
-    name: "llm-research-model",
-    data: {
-      researchInput: researchInput,
-      researchResult: researchResult,
-      recordId: recordId,
-    },
+  const handle = await tasks.trigger("llm-research-model", {
+    researchInput: researchInput,
+    researchResult: researchResult,
+    recordId: recordId,
+    libId: libId,
   });
 
-  return NextResponse.json(inngestRunId.ids[0]);
+  return NextResponse.json(handle.id);
 }
+

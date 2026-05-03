@@ -22,8 +22,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider clockSkew={60000}>
       <html lang="en">
+
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >

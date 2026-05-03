@@ -5,25 +5,10 @@ import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { CheckCircle, AlertTriangle, Info, ExternalLink } from "lucide-react";
 
 const DisplaySummary = ({ aiResp }) => {
-  // Pre-process the response to convert plain text bullets to markdown lists
-  // and handle other formatting for better display
+  // Pre-process the response to handle formatting for better display
   const processedResp = React.useMemo(() => {
     if (!aiResp) return "";
-    return aiResp
-      .split("\n")
-      .map(line => {
-        const trimmed = line.trim();
-        // Convert • or * bullets to markdown list items
-        if (trimmed.startsWith("•") || trimmed.startsWith("*")) {
-          return `- ${trimmed.substring(1).trim()}`;
-        }
-        // Bold lines that look like headers (ending with :)
-        if (trimmed.length > 0 && trimmed.endsWith(":") && !trimmed.startsWith("-")) {
-          return `### ${trimmed}`;
-        }
-        return line;
-      })
-      .join("\n");
+    return aiResp;
   }, [aiResp]);
 
   return (

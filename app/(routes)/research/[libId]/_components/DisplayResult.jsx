@@ -109,15 +109,18 @@ const DisplayResult = ({ researchInputRecord }) => {
       researchInput: userInput || researchInputRecord?.searchInput,
       researchResult: formattedResearchResp,
       recordId: recordId,
+      libId: libId,
     });
+
 
     const runId = result.data;
     console.log("Run ID:", runId);
 
     const interval = setInterval(async () => {
-      const runResp = await axios.post("/api/get-inngest-status", {
+      const runResp = await axios.post("/api/get-task-status", {
         runId: runId,
       });
+
 
       if (runResp?.data?.data?.[0]?.status === "Completed") {
         console.log("COMPLETED");

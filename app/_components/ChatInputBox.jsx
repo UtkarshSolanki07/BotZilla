@@ -156,14 +156,13 @@ function ChatInputBox() {
                 <span
                   key={i}
                   className="inline-block relative"
-                  style={{
-                    animation: isLoaded
-                      ? `letterPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards`
-                      : "none",
-                    animationDelay: `${i * 0.08}s`,
-                    opacity: isLoaded ? 1 : 0,
-                    transform: isLoaded ? "none" : "scale(0) rotateY(180deg)",
-                  }}
+                    style={{
+                      animation: isLoaded
+                        ? `letterPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 0.08}s forwards`
+                        : "none",
+                      opacity: isLoaded ? 1 : 0,
+                      transform: isLoaded ? "none" : "scale(0) rotateY(180deg)",
+                    }}
                 >
                   {/* Multiple gradient layers for depth */}
                   <span
@@ -235,8 +234,7 @@ function ChatInputBox() {
                   background: colors[i % colors.length],
                   top: `${topPos}%`,
                   left: `${leftPos}%`,
-                  animation: `floatParticle ${dur}s ease-in-out infinite`,
-                  animationDelay: `${delay}s`,
+                  animation: `floatParticle ${dur}s ease-in-out ${delay}s infinite`,
                   filter: "blur(0.6px)",
                   opacity: 0.55,
                 }}
@@ -298,7 +296,7 @@ function ChatInputBox() {
 
           <div className="flex flex-wrap sm:flex-nowrap gap-2 items-center justify-end w-full sm:w-auto">
             <DropdownMenu>
-              <DropdownMenuTrigger>
+              <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
                   className="transition-transform duration-200 hover:scale-110"
